@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 
 public class Main extends JFrame {
 
-    public JPanel contentPane;
-    public JMenuItem exitItem;
-    public JMenuItem pointItem;
-    public JMenuItem lineItem;
-    public JMenuItem rectangularItem;
-    public JMenuItem ellipseItem;
-    public JMenuItem selectedShapeItem;
+    private final JPanel contentPane;
+    private final JMenuItem exitItem;
+    private final JMenuItem pointItem;
+    private final JMenuItem lineItem;
+    private final JMenuItem rectangularItem;
+    private final JMenuItem ellipseItem;
+    private final JMenuItem selectedShapeItem;
     private final ShapeObjectsEditor shapeObjectsEditor;
     private boolean isDrawingEnabled = false;
 
@@ -61,7 +61,7 @@ public class Main extends JFrame {
         shapeObjectsEditor.setBounds(0, 0, 800, 600);
         handleMenuItemsActionListeners();
     }
-    public void handleMenuItemsActionListeners() {
+    private void handleMenuItemsActionListeners() {
 
         exitItem.addActionListener(new ActionListener() {
 
