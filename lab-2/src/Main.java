@@ -132,13 +132,11 @@ public class Main extends JFrame {
             shapeObjectsEditor.drawShape();
         }
         contentPane.add(shapeObjectsEditor);
-        System.out.println("Drawing enabled");
     }
 
     private void disableDrawing() {
 
         isDrawingEnabled = false;
-        System.out.println("Drawing disabled");
         selectedShapeItem.setText("Вибраний об'єкт: Немає");
         contentPane.remove(shapeObjectsEditor);
     }
