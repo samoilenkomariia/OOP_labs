@@ -14,8 +14,8 @@ public class Main extends JFrame {
     public JMenuItem rectangularItem;
     public JMenuItem ellipseItem;
     public JMenuItem selectedShapeItem;
-    public ShapeObjectsEditor shapeObjectsEditor;
-    public boolean isDrawingEnabled = false;
+    private final ShapeObjectsEditor shapeObjectsEditor;
+    private boolean isDrawingEnabled = false;
 
     public Main() {
 
@@ -110,7 +110,9 @@ public class Main extends JFrame {
             enableDrawing();
         }
         else if (shapeObjectsEditor.currentEditor != null && shapeObjectsEditor.currentEditor.
-                currentObject != ShapeEditor.chosenObject.NONE) {
+                currentObject != ShapeEditor.chosenObject.NONE &&
+        shapeObjectsEditor.currentEditor.currentObject != shapeEditor.currentObject)
+        {
             disableDrawing();
             shapeObjectsEditor.currentEditor = shapeEditor;
             enableDrawing();
