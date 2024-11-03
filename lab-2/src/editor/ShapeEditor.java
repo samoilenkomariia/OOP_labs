@@ -7,13 +7,19 @@ import java.awt.event.MouseEvent;
 public class ShapeEditor extends Editor {
 
     protected ShapeObjectsEditor shapeObjectsEditor;
-    public enum chosenObject { NONE, POINT, LINE, RECTANGLE, ELLIPSE }
-    public chosenObject currentObject = chosenObject.NONE;
+    public enum objects { NONE, POINT, LINE, RECTANGLE, ELLIPSE }
+    protected objects currentObject = objects.NONE;
 
 
-    protected ShapeEditor (ShapeObjectsEditor shapeObjectsEditor) {
+    public ShapeEditor (ShapeObjectsEditor shapeObjectsEditor) {
         this.shapeObjectsEditor = shapeObjectsEditor;
     }
+
+    public objects getCurrentObject() {
+        return currentObject;
+    }
+
+
 
     @Override
     public void processMouseEvent(MouseEvent event) {

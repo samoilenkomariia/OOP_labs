@@ -9,7 +9,7 @@ public class PointShapeEditor extends ShapeEditor {
 
     public PointShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
         super(shapeObjectsEditor);
-        currentObject = chosenObject.POINT;
+        currentObject = objects.POINT;
     }
 
     @Override

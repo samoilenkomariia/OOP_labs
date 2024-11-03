@@ -11,7 +11,7 @@ public class LineShapeEditor extends ShapeEditor {
 
     public LineShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
         super(shapeObjectsEditor);
-        currentObject = chosenObject.LINE;
+        currentObject = objects.LINE;
     }
     private Point startPoint, endPoint;
 
@@ -36,8 +36,8 @@ public class LineShapeEditor extends ShapeEditor {
             } else {
                 shapeObjectsEditor.isDrawing = false;
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 lineShape = (LineShape) shapeObjectsEditor.showedShapes[shapeObjectsEditor.index];
                 drawTireMark(lineShape);
                 saveShape();
@@ -59,8 +59,8 @@ public class LineShapeEditor extends ShapeEditor {
             @Override
             public void mouseMoved(MouseEvent event) {
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
                 shapeObjectsEditor.repaint();
             }

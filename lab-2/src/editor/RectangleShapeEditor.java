@@ -11,7 +11,7 @@ public class RectangleShapeEditor extends ShapeEditor {
 
     public RectangleShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
         super(shapeObjectsEditor);
-        currentObject = chosenObject.RECTANGLE;
+        currentObject = objects.RECTANGLE;
     }
 
     private Point startPoint, endPoint;
@@ -37,8 +37,8 @@ public class RectangleShapeEditor extends ShapeEditor {
             } else {
                 shapeObjectsEditor.isDrawing = false;
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 rectangleShape = (RectangleShape) shapeObjectsEditor.showedShapes[shapeObjectsEditor.index];
                 drawTireMark(rectangleShape);
                 saveShape();
@@ -60,8 +60,8 @@ public class RectangleShapeEditor extends ShapeEditor {
             @Override
             public void mouseMoved(MouseEvent event) {
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
                 shapeObjectsEditor.repaint();
             }

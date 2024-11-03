@@ -110,8 +110,8 @@ public class Main extends JFrame {
             enableDrawing();
         }
         else if (shapeObjectsEditor.currentEditor != null && shapeObjectsEditor.currentEditor.
-                currentObject != ShapeEditor.chosenObject.NONE &&
-        shapeObjectsEditor.currentEditor.currentObject != shapeEditor.currentObject)
+                getCurrentObject() != ShapeEditor.objects.NONE &&
+        shapeObjectsEditor.currentEditor.getCurrentObject() != shapeEditor.getCurrentObject())
         {
             disableDrawing();
             shapeObjectsEditor.currentEditor = shapeEditor;

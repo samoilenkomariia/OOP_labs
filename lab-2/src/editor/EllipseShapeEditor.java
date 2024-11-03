@@ -11,7 +11,7 @@ public class EllipseShapeEditor extends ShapeEditor{
 
     public EllipseShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
         super(shapeObjectsEditor);
-        currentObject = chosenObject.ELLIPSE;
+        currentObject = objects.ELLIPSE;
     }
 
     private Point startPoint, endPoint;
@@ -34,8 +34,8 @@ public class EllipseShapeEditor extends ShapeEditor{
             } else {
                 shapeObjectsEditor.isDrawing = false;
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 ellipseShape = (EllipseShape) shapeObjectsEditor.showedShapes[shapeObjectsEditor.index];
                 drawTireMark(ellipseShape);
                 saveShape();
@@ -57,8 +57,8 @@ public class EllipseShapeEditor extends ShapeEditor{
             @Override
             public void mouseMoved(MouseEvent event) {
                 endPoint = event.getPoint();
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endX = endPoint.x;
-                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].endY = endPoint.y;
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndX(endPoint.x);
+                shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].setEndY(endPoint.y);
                 shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
                 shapeObjectsEditor.repaint();
             }
