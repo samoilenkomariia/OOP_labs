@@ -140,7 +140,7 @@ public class Main extends JFrame {
 
         isDrawingEnabled = false;
         selectedShapeItem.setText("Вибраний об'єкт: Немає");
-        contentPane.remove(shapeObjectsEditor);
+        shapeObjectsEditor.removeMouseListener(shapeObjectsEditor.getMouseListeners()[0]);
     }
 
     public static void main(String[] args) {
