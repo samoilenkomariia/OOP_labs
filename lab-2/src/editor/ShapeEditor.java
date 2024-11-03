@@ -6,12 +6,12 @@ import java.awt.event.MouseEvent;
 
 public class ShapeEditor extends Editor {
 
-    public ShapeObjectsEditor shapeObjectsEditor;
+    protected ShapeObjectsEditor shapeObjectsEditor;
     public enum chosenObject { NONE, POINT, LINE, RECTANGLE, ELLIPSE }
     public chosenObject currentObject = chosenObject.NONE;
 
 
-    public ShapeEditor (ShapeObjectsEditor shapeObjectsEditor) {
+    protected ShapeEditor (ShapeObjectsEditor shapeObjectsEditor) {
         this.shapeObjectsEditor = shapeObjectsEditor;
     }
 
@@ -20,11 +20,11 @@ public class ShapeEditor extends Editor {
 
     }
 
-    public void saveShape() {
+    protected void saveShape() {
 
     }
 
-    public void trackMouseMoving() {
+    protected void trackMouseMoving() {
 
     }
 

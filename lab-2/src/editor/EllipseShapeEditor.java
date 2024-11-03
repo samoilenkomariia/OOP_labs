@@ -14,15 +14,12 @@ public class EllipseShapeEditor extends ShapeEditor{
         currentObject = chosenObject.ELLIPSE;
     }
 
-    public Point startPoint, endPoint;
+    private Point startPoint, endPoint;
 
     @Override
     public void processMouseEvent(MouseEvent event) {
 
-        super.processMouseEvent(event);
-
         EllipseShape ellipseShape;
-
         if (event.getID() == MouseEvent.MOUSE_PRESSED) {
             if (!shapeObjectsEditor.isDrawing) {
                 shapeObjectsEditor.isDrawing = true;
@@ -46,7 +43,7 @@ public class EllipseShapeEditor extends ShapeEditor{
         }
     }
 
-    public void saveShape() {
+    protected void saveShape() {
 
         shapeObjectsEditor.removeMouseMotionListener(shapeObjectsEditor.getMouseMotionListeners()[0]);
         shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
@@ -54,7 +51,7 @@ public class EllipseShapeEditor extends ShapeEditor{
         shapeObjectsEditor.index++;
     }
 
-    public void trackMouseMoving() {
+    protected void trackMouseMoving() {
 
         shapeObjectsEditor.addMouseMotionListener(new MouseAdapter() {
             @Override
@@ -68,7 +65,7 @@ public class EllipseShapeEditor extends ShapeEditor{
         });
     }
 
-    public void drawTireMark(EllipseShape tireShape) {
+    private void drawTireMark(EllipseShape tireShape) {
 
         if (shapeObjectsEditor.isDrawing) tireShape.setDrawColor(Color.blue);
         else tireShape.setDrawColor(Color.black);

@@ -4,12 +4,7 @@ import java.awt.*;
 
 public class LineShape extends Shape {
 
-    public Color drawColor = Color.black;
-
-    public LineShape(int startX, int startY, int endX, int endY, Graphics g) {
-
-        super(startX, startY, endX, endY, g);
-    }
+    private Color drawColor = Color.black;
 
     public LineShape(int startX, int startY, Graphics g) {
         super(startX, startY, g);

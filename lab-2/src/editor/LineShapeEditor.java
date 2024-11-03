@@ -13,7 +13,7 @@ public class LineShapeEditor extends ShapeEditor {
         super(shapeObjectsEditor);
         currentObject = chosenObject.LINE;
     }
-    public Point startPoint, endPoint;
+    private Point startPoint, endPoint;
 
     @Override
     public void processMouseEvent(MouseEvent event) {
@@ -45,7 +45,7 @@ public class LineShapeEditor extends ShapeEditor {
         }
     }
 
-    public void saveShape() {
+    protected void saveShape() {
 
         shapeObjectsEditor.removeMouseMotionListener(shapeObjectsEditor.getMouseMotionListeners()[0]);
         shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
@@ -53,7 +53,7 @@ public class LineShapeEditor extends ShapeEditor {
         shapeObjectsEditor.index++;
     }
 
-    public void trackMouseMoving() {
+    protected void trackMouseMoving() {
 
         shapeObjectsEditor.addMouseMotionListener(new MouseAdapter() {
             @Override
@@ -67,7 +67,7 @@ public class LineShapeEditor extends ShapeEditor {
         });
     }
 
-    public void drawTireMark(LineShape tireShape) {
+    private void drawTireMark(LineShape tireShape) {
 
         if (shapeObjectsEditor.isDrawing) tireShape.setDrawColor(Color.blue);
         else tireShape.setDrawColor(Color.black);

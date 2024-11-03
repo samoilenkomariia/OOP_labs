@@ -9,12 +9,12 @@ import java.awt.event.MouseEvent;
 
 public class RectangleShapeEditor extends ShapeEditor {
 
-        public RectangleShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
-            super(shapeObjectsEditor);
-            currentObject = chosenObject.RECTANGLE;
-        }
+    public RectangleShapeEditor(ShapeObjectsEditor shapeObjectsEditor) {
+        super(shapeObjectsEditor);
+        currentObject = chosenObject.RECTANGLE;
+    }
 
-        public Point startPoint, endPoint;
+    private Point startPoint, endPoint;
 
     @Override
     public void processMouseEvent(MouseEvent event) {
@@ -46,7 +46,7 @@ public class RectangleShapeEditor extends ShapeEditor {
         }
     }
 
-    public void saveShape() {
+    protected void saveShape() {
 
         shapeObjectsEditor.removeMouseMotionListener(shapeObjectsEditor.getMouseMotionListeners()[0]);
         shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
@@ -54,7 +54,7 @@ public class RectangleShapeEditor extends ShapeEditor {
         shapeObjectsEditor.index++;
     }
 
-    public void trackMouseMoving() {
+    protected void trackMouseMoving() {
 
         shapeObjectsEditor.addMouseMotionListener(new MouseAdapter() {
             @Override
@@ -68,7 +68,7 @@ public class RectangleShapeEditor extends ShapeEditor {
         });
     }
 
-    public void drawTireMark(RectangleShape tireShape) {
+    private void drawTireMark(RectangleShape tireShape) {
 
         if (shapeObjectsEditor.isDrawing) tireShape.setDrawColor(Color.blue);
         else tireShape.setDrawColor(Color.black);

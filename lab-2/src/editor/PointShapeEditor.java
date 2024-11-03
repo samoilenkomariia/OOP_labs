@@ -15,13 +15,13 @@ public class PointShapeEditor extends ShapeEditor {
     @Override
     public void processMouseEvent(MouseEvent event) {
 
-        super.processMouseEvent(event);
         int x = event.getX();
         int y = event.getY();
 
         if (event.getID() == MouseEvent.MOUSE_PRESSED) {
             shapeObjectsEditor.showedShapes[shapeObjectsEditor.index] =
                     new PointShape(x, y, shapeObjectsEditor.getGraphics());
+            shapeObjectsEditor.showedShapes[shapeObjectsEditor.index].show();
             shapeObjectsEditor.repaint();
             shapeObjectsEditor.index++;
         }

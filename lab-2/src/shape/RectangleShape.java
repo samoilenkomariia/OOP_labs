@@ -4,8 +4,7 @@ import java.awt.*;
 
 public class RectangleShape extends Shape {
 
-    public int x, y, width, height;
-    public Color drawColor = Color.black;
+    private Color drawColor = Color.black;
 
     public RectangleShape(int startX, int startY, Graphics g) {
         this(startX, startY, startX, startY, g);
@@ -20,10 +19,10 @@ public class RectangleShape extends Shape {
     @Override
     public void show() {
 
-        x = Math.min(startX, endX);
-        y = Math.min(startY, endY);
-        width = Math.abs(startX - endX);
-        height = Math.abs(startY - endY);
+        int x = Math.min(startX, endX);
+        int y = Math.min(startY, endY);
+        int width = Math.abs(startX - endX);
+        int height = Math.abs(startY - endY);
         Graphics2D g2 = (Graphics2D) g;
         g2.setStroke(new BasicStroke(2));
         g2.setColor(drawColor);
