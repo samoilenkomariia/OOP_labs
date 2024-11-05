@@ -19,8 +19,6 @@ public class ShapeEditor extends Editor {
         return currentObject;
     }
 
-
-
     @Override
     public void processMouseEvent(MouseEvent event) {
 

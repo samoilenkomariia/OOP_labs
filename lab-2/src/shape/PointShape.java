@@ -10,8 +10,8 @@ public class PointShape extends Shape {
 
     public void show() {
 
-        final int width = 5;
-        final int height = 5;
+        final int width = 7;
+        final int height = 7;
         g.setColor(Color.black);
         g.fillOval(startX, startY, width, height);
     }

@@ -10,7 +10,7 @@ import java.awt.event.MouseAdapter;
 public class ShapeObjectsEditor extends JPanel {
 
         public ShapeEditor currentEditor;
-        public Shape[] showedShapes = new Shape[100];
+        public Shape[] showedShapes = new Shape[122];
         public int index = 0;
         public boolean isDrawing;
 
@@ -20,6 +20,7 @@ public class ShapeObjectsEditor extends JPanel {
 
                 public void mousePressed(java.awt.event.MouseEvent evt) {
                     currentEditor.processMouseEvent(evt);
+                    if(index+1 > 122) index = 0;
                 }
             });
         }

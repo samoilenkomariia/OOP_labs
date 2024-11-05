@@ -2,8 +2,7 @@ import editor.*;
 import shape_editor.ShapeObjectsEditor;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
 
 public class Main extends JFrame {
 
@@ -23,8 +22,7 @@ public class Main extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
 
-        contentPane = new JPanel();
-        contentPane.setLayout(null);
+        contentPane = new JPanel(new BorderLayout());
         setContentPane(contentPane);
 
         JMenuBar menuBar = new JMenuBar();
@@ -63,44 +61,15 @@ public class Main extends JFrame {
     }
     private void handleMenuItemsActionListeners() {
 
-        exitItem.addActionListener(new ActionListener() {
+        exitItem.addActionListener(e -> System.exit(0));
 
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        pointItem.addActionListener(e -> chooseEditorDrawObject(new PointShapeEditor(shapeObjectsEditor)));
 
-        pointItem.addActionListener(new ActionListener() {
+        lineItem.addActionListener(e -> chooseEditorDrawObject(new LineShapeEditor(shapeObjectsEditor)));
 
-            public void actionPerformed(ActionEvent e) {
+        rectangularItem.addActionListener(e -> chooseEditorDrawObject(new RectangleShapeEditor(shapeObjectsEditor)));
 
-                chooseEditorDrawObject(new PointShapeEditor(shapeObjectsEditor));
-            }
-        });
-
-        lineItem.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-
-                chooseEditorDrawObject(new LineShapeEditor(shapeObjectsEditor));
-            }
-        });
-
-        rectangularItem.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-
-                chooseEditorDrawObject(new RectangleShapeEditor(shapeObjectsEditor));
-            }
-        });
-
-        ellipseItem.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
-
-                chooseEditorDrawObject(new EllipseShapeEditor(shapeObjectsEditor));
-            }
-        });
+        ellipseItem.addActionListener(e -> chooseEditorDrawObject(new EllipseShapeEditor(shapeObjectsEditor)));
     }
 
     private void chooseEditorDrawObject(ShapeEditor shapeEditor) {

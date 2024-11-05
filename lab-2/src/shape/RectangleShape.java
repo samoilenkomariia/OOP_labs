@@ -5,6 +5,7 @@ import java.awt.*;
 public class RectangleShape extends Shape {
 
     private Color drawColor = Color.black;
+    private Color fillColor = new Color(0 ,0, 0, 0);
 
     public RectangleShape(int startX, int startY, Graphics g) {
         this(startX, startY, startX, startY, g);
@@ -27,11 +28,15 @@ public class RectangleShape extends Shape {
         g2.setStroke(new BasicStroke(2));
         g2.setColor(drawColor);
         g2.drawRect(x, y, width+2, height+2);
-        g2.setColor(Color.orange);
+        g2.setColor(fillColor);
         g2.fillRect(x+1, y+1, width, height);
     }
 
     public void setDrawColor(Color drawColor) {
         this.drawColor = drawColor;
+    }
+
+    public void setFillColor(Color fillColor) {
+        this.fillColor = fillColor;
     }
 }

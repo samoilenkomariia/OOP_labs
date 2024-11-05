@@ -71,6 +71,9 @@ public class RectangleShapeEditor extends ShapeEditor {
     private void drawTireMark(RectangleShape tireShape) {
 
         if (shapeObjectsEditor.isDrawing) tireShape.setDrawColor(Color.blue);
-        else tireShape.setDrawColor(Color.black);
+        else {
+            tireShape.setDrawColor(Color.black);
+            tireShape.setFillColor(Color.orange);
+        }
     }
 }
