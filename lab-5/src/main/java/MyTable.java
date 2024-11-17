@@ -66,7 +66,6 @@ public class MyTable extends JFrame {
             writer.newLine();
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error writing to the file: " + e.getMessage(), "File Write Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
         }
         for (Object[] rowData : tableData) {
             try (BufferedWriter writer = new BufferedWriter(
@@ -79,7 +78,6 @@ public class MyTable extends JFrame {
                 writer.newLine();
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, "Error writing to the file: " + e.getMessage(), "File Write Error", JOptionPane.ERROR_MESSAGE);
-                e.printStackTrace();
             }
         }
     }

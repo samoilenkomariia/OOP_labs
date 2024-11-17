@@ -31,7 +31,7 @@ application {
 tasks {
     shadowJar {
         manifest {
-            attributes["Main-Class"] = "Main"  // Fully qualified name if in a package
+            attributes["Main-Class"] = "Main"
         }
 
         archiveFileName.set("Lab5.jar")

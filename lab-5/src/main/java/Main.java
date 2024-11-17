@@ -177,7 +177,6 @@ public class Main extends JFrame implements Callback {
                         "Сталася несподівана помилка: " + e.getMessage(),
                         "Помилка",
                         JOptionPane.ERROR_MESSAGE);
-                e.printStackTrace();
             }
         });
 

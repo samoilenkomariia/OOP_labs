@@ -1,2 +1,2 @@
-rootProject.name = "OOPLab4Gradle"
+rootProject.name = "OOPLab5Gradle"
 
