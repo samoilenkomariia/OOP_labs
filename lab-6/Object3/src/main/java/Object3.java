@@ -95,9 +95,11 @@ public class Object3 extends JFrame {
     }
 
     private void clearTable (JTable table) {
-        DefaultTableModel model = (DefaultTableModel) table.getModel();
-        model.setRowCount(0);
-        writeFile(object3, "");
+        if (table != null) {
+            DefaultTableModel model = (DefaultTableModel) table.getModel();
+            model.setRowCount(0);
+            writeFile(object3, "");
+        }
     }
 
     private String getClipboardData() throws UnsupportedFlavorException, IOException {
