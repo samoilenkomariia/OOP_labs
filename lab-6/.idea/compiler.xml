@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Lab6" target="17" />
+      <module name="Lab6.main" target="17" />
+      <module name="Lab6.test" target="17" />
+      <module name="Object2" target="17" />
+      <module name="Object2.main" target="17" />
+      <module name="Object2.test" target="17" />
+      <module name="Object3" target="17" />
+      <module name="Object3.main" target="17" />
+      <module name="Object3.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

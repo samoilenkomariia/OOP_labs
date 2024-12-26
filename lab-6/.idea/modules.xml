@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lab6.iml" filepath="$PROJECT_DIR$/Lab6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lab6.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Lab6.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Lab6.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Lab6.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OOPLab6Gradle.iml" filepath="$PROJECT_DIR$/.idea/OOPLab6Gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Object2.iml" filepath="$PROJECT_DIR$/Object2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Object2.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Object2.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Object2.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Object2.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Object3.iml" filepath="$PROJECT_DIR$/Object3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Object3.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Object3.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Object3.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Object3.test.iml" />
+    </modules>
+  </component>
+</project>
